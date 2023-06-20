@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">The Library</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_library">Library</string>
+    <string name="lbl_home_hint_search">Search Play Books</string>
+    <string name="lbl_vp_book_list_example">More like Don\'t Make Me Think, Revisit....</string>
+    <string name="lbl_vh_book_example">Pokemon: Mew Character</string>
+    <string name="lbl_vp_audio_book_example">Audiobooks for you</string>
+    <string name="lbl_book_detail_example">Oranges Are Not The Only Fruit</string>
+    <string name="lbl_book_detail_author_example">Jeanette Winterson</string>
+    <string name="lbl_book_detail_book">Ebook</string>
+    <string name="lbl_book_detail_pages_exampe">137 pages</string>
+    <string name="lbl_book_detail_button_example1">Free Sample</string>
+    <string name="lbl_book_detail_button_example2">Add To Wishlist</string>
+    <string name="lbl_book_detail_info_example">Books that you buy on the Google Play website can be read in this app.</string>
+    <string name="lbl_book_detail_about">About this book</string>
+    <string name="lbl_book_detail_overview">A Brief History of Time: From the Big Bang to Black Holes is a book on theoretical cosmology by English physicist Stephen Hawking. It was first published in 1988. Hawking wrote the book for readers who had no prior knowledge of physics.</string>
+    <string name="lbl_book_detail_rating">Rating and reviews</string>
+    <string name="lbl_book_detail_published">Published</string>
+    <string name="lbl_book_detail_published_date">December 1, 2007 . Open Road + Grove/Atlantic</string>
+    <string name="lbl_about_book_example">About Orange Are Not the On..</string>
+    <string name="lbl_book_about_example">magnate, inventor, and investor. He was the co-founder, chairman, and CEO of Apple; the chairman and majority shareholder of Pixar; a member of The Walt Disney Company\'s board of directors following its acquisition of Pixar; and the founder, chairman, and CEO of NeXT. He was a pioneer of the personal computer revolution of the 1970s and 1980s, along with his early business partner and fellow Apple co-founder Steve Wozniak. Jobs was born in San Francisco to a Syrian father and German-American mother. He was adopted shortly after his birth. Jobs attended Reed College in 1972 before withdrawing that same year. \n In 1974, he traveled through India seeking enlightenment before later studying Zen Buddhism. He and Wozniak co-founded Apple in 1976 to sell Wozniak\'s Apple I personal computer. Together the duo gained fame and wealth a year later with production and sale of the Apple II, one of the first highly successful mass-produced microcomputers. Jobs saw the commercial potential of the Xerox Alto in 1979, which was mouse-driven and had a graphical user interface (GUI). This led to the development of the unsuccessful Apple Lisa in 1983, followed by the breakthrough Macintosh in 1984, the first mass-produced computer with a GUI. The Macintosh introduced the desktop publishing industry in 1985 with the addition of the Apple LaserWriter, the first laser printer to feature vector graphics.\n In 1985, Jobs was forced out of Apple after a long power struggle with the company\'s board and its then-CEO, John Sculley. That same year, Jobs took a few Apple employees with him to found NeXT, a computer platform development company that specialized in computers for higher-education and business markets. In addition, he helped to develop the visual effects industry when he funded the computer graphics division of George Lucas\'s Lucasfilm in 1986. The new company was Pixar, which produced the first 3D computer-animated feature film Toy Story (1995) and went on to become a major animation studio, producing over 25 films since. In 1997, Jobs returned to Apple as CEO after the company\'s acquisition of NeXT. He was largely responsible for reviving Apple, which was on the verge of bankruptcy. He worked closely with English designer Jony Ive to develop a line of products that had larger cultural ramifications, beginning with the advertising campaign and leading to the Apple Store, App Store (iOS), iMac, iPad, iPod, iPhone, iTunes, and iTunes Store. In 2001, the original Mac OS was replaced with the completely new Mac OS X (later known as macOS), based on NeXT\'s NeXTSTEP platform, giving the operating system a modern Unix-based foundation for the first time. In 2003, Jobs was diagnosed with a pancreatic neuroendocrine tumor. He died of respiratory arrest related to the tumor in 2011, at the age of 56, with Tim Cook succeeding him as CEO of Apple. In 2022, he was posthumously awarded the Presidential Medal of Freedom.</string>
+    <string name="lbl_rating_and_review">Rating and reviews</string>
+    <string name="lbl_book_search_example">Result from Google Play</string>
+    <string name="lbl_bs_download">Download</string>
+    <string name="lbl_bs_library">Delete from your library</string>
+    <string name="lbl_bs_add_shelves">Add to shelves</string>
+    <string name="lbl_bs_add_library">Add to library</string>
+    <string name="lbl_bs_read">Mask as read</string>
+    <string name="lbl_bs_about_book">About this book</string>
+    <string name="btn_library_create">Create new</string>
+    <string name="lbl_library_recent">Recent</string>
+    <string name="lbl_library_sort">Sort By:</string>
+    <string name="lbl_shelves">No shelves</string>
+    <string name="lbl_shelves_example">Create shelves to match the way\nyou think</string>
+    <string name="lbl_create_shelf">Create shelf</string>
+    <string name="lbl_new_shelf_edit">Enter new shelf name</string>
+    <string name="lbl_edit_text_limit">0/50</string>
+
+    <string name="lbl_add_to_shelves">Add to shelves</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

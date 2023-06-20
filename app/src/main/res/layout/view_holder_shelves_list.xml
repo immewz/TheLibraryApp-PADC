@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingTop="@dimen/margin_card_medium_2">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvBookImage"
+        android:layout_width="70dp"
+        android:layout_height="80dp"
+        app:cardCornerRadius="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_large">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBookImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/empty_image"
+            android:scaleType="centerCrop"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/cvBookImage"
+        android:id="@+id/tvBookTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_bold"
+        android:text="@string/lbl_book_detail_example"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_large"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/cvBookImage"
+        android:layout_below="@id/tvBookTitle"
+        android:id="@+id/tvBookCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_medium"
+        android:text="3 books"
+        android:textSize="@dimen/text_small"
+        android:layout_marginTop="@dimen/margin_card_medium"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_large" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_alignParentEnd="true"
+        android:id="@+id/btnSeeMore"
+        android:layout_width="@dimen/margin_xlarge"
+        android:layout_height="@dimen/margin_xlarge"
+        android:src="@drawable/baseline_chevron_right_light_blue_24dp"
+        android:layout_centerVertical="true"
+        android:tint="@color/colorPrimaryLight"
+        android:layout_marginEnd="@dimen/margin_medium_3"/>
+
+    <View
+        android:layout_below="@id/cvBookImage"
+        android:id="@+id/divider1"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"/>
+
+</RelativeLayout>

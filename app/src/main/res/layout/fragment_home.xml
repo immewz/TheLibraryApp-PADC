@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.HomeFragment"
+    android:layout_marginTop="@dimen/margin_large">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/llBanner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerBanner"
+                    android:layout_width="@dimen/width_banner"
+                    android:layout_height="@dimen/height_banner"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginVertical="@dimen/margin_medium_2"
+                    android:elevation="@dimen/margin_medium" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/tlBook"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:backgroundTint="@color/colorPrimary"
+                    app:tabBackground="@color/colorPrimary"
+                    app:tabGravity="center"
+                    app:tabIndicatorAnimationMode="linear"
+                    app:tabIndicatorColor="@color/colorAccent"
+                    app:tabIndicatorGravity="bottom"
+                    app:tabIndicatorFullWidth="false"
+                    app:tabMode="fixed"
+                    app:tabRippleColor="@color/colorAccent"
+                    app:tabSelectedTextColor="@color/colorAccent"
+                    app:tabPaddingStart="40dp"
+                    app:tabPaddingEnd="40dp"
+                    app:tabTextAppearance="@style/TabLayoutBookStyle"/>
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@android:color/darker_gray"/>
+
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_below="@id/llBanner"
+                android:id="@+id/rlEbook"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginHorizontal="@dimen/margin_medium">
+
+                <!--  First Category List   -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvFirstCategory"
+                    android:layout_width="@dimen/width_category"
+                    android:layout_height="@dimen/height_category"
+                    android:fontFamily="@font/dms_bold"
+                    android:textSize="@dimen/text_18sp"
+                    android:textColor="@color/black"
+                    android:text="@string/lbl_vp_book_list_example"
+                    android:layout_marginTop="@dimen/margin_card_medium"
+                    android:layout_marginStart="@dimen/margin_card_medium_2"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_alignParentEnd="true"
+                    android:id="@+id/btnFirstSeeMore"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:src="@drawable/baseline_chevron_right_light_blue_24dp"
+                    android:layout_marginTop="@dimen/margin_small"/>
+
+                <include
+                    android:id="@+id/vpFirstBookList"
+                    android:layout_below="@id/tvFirstCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/view_pod_book_list"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                <!--  Second Category List   -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_below="@id/vpFirstBookList"
+                    android:id="@+id/tvSecondCategory"
+                    android:layout_width="@dimen/width_category"
+                    android:layout_height="@dimen/height_category"
+                    android:fontFamily="@font/dms_bold"
+                    android:textSize="@dimen/text_18sp"
+                    android:textColor="@color/black"
+                    android:text="@string/lbl_vp_book_list_example"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginStart="@dimen/margin_card_medium_2"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/vpFirstBookList"
+                    android:id="@+id/btnSecondSeeMore"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:src="@drawable/baseline_chevron_right_light_blue_24dp"
+                    android:layout_marginTop="@dimen/margin_medium_3"/>
+
+                <include
+                    android:id="@+id/vpSecondBookList"
+                    android:layout_below="@id/tvSecondCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/view_pod_book_list"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+
+                <!--  Third Category List   -->
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_below="@id/vpSecondBookList"
+                    android:id="@+id/tvThirdCategory"
+                    android:layout_width="@dimen/width_category"
+                    android:layout_height="@dimen/height_category"
+                    android:fontFamily="@font/dms_bold"
+                    android:textSize="@dimen/text_18sp"
+                    android:textColor="@color/black"
+                    android:text="@string/lbl_vp_book_list_example"
+                    android:layout_marginTop="@dimen/margin_large"
+                    android:layout_marginStart="@dimen/margin_card_medium_2"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/vpSecondBookList"
+                    android:id="@+id/btnThirdSeeMore"
+                    android:layout_width="@dimen/margin_xlarge"
+                    android:layout_height="@dimen/margin_xlarge"
+                    android:src="@drawable/baseline_chevron_right_light_blue_24dp"
+                    android:layout_marginTop="@dimen/margin_medium_3"/>
+
+                <include
+                    android:id="@+id/vpThirdBookList"
+                    android:layout_below="@id/tvThirdCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/view_pod_book_list"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginHorizontal="@dimen/margin_medium"
+    android:layout_marginVertical="@dimen/margin_medium">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_medium">
+
+        <FrameLayout
+            android:id="@+id/flBook"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnOption"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/menu"
+                android:tint="@color/colorDot"
+                android:elevation="@dimen/margin_medium"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/margin_card_medium" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivBook"
+                android:layout_width="250dp"
+                android:layout_height="280dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/empty_image" />
+
+            <FrameLayout
+                android:id="@+id/flHeadphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_carousel_icon"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/headphone"
+                    android:tint="@color/white"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_carousel_icon"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="bottom|end"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_medium">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/check"
+                    android:tint="@color/white"/>
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_below="@id/cvBook"
+        android:id="@+id/tvBookTitle"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        app:fontFamily="@font/dms_medium"
+        android:text="@string/lbl_vh_book_example"
+        android:textColor="@color/colorIconBackground"
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_marginTop="@dimen/margin_small"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_below="@id/tvBookTitle"
+        android:id="@+id/tvAuthor"
+        android:layout_width="200dp"
+        android:layout_height="20dp"
+        app:fontFamily="@font/dms_medium"
+        android:text="@string/lbl_vh_book_example"
+        android:textColor="@color/colorIconBackground"
+        android:textSize="@dimen/text_regular_2x"/>
+
+</RelativeLayout>

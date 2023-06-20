@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="@dimen/margin_medium_2">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvBookImage"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        app:cardCornerRadius="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_xlarge">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBookImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/mew"
+            android:scaleType="centerCrop"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvBookTitle"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:layout_toEndOf="@id/cvBookImage"
+        android:fontFamily="@font/dms_bold"
+        android:text="@string/lbl_book_detail_example"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/cvBookImage"
+        android:layout_below="@id/tvBookTitle"
+        android:id="@+id/tvAuthor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_medium"
+        android:text="@string/lbl_book_detail_author_example"
+        android:textSize="@dimen/text_small"
+        android:layout_marginTop="@dimen/margin_card_medium"
+        android:layout_marginStart="@dimen/margin_medium_2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_toEndOf="@id/tvAuthor"
+        android:layout_below="@id/tvBookTitle"
+        android:id="@+id/ivDot"
+        android:layout_width="@dimen/margin_small"
+        android:layout_height="@dimen/margin_small"
+        android:src="@drawable/elipse"
+        android:layout_marginTop="14dp"
+        android:layout_marginHorizontal="@dimen/margin_card_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/ivDot"
+        android:layout_below="@id/tvBookTitle"
+        android:id="@+id/tvBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_medium"
+        android:text="@string/lbl_book_detail_book"
+        android:textSize="@dimen/text_small"
+        android:layout_marginTop="@dimen/margin_card_medium"/>
+
+    <View
+        android:layout_below="@id/cvBookImage"
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/darker_gray"
+        android:layout_marginTop="@dimen/margin_medium_2"/>
+
+    <LinearLayout
+        android:layout_below="@id/divider"
+        android:id="@+id/btnBottomSheetDownload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/download" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="@string/lbl_bs_download"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/btnBottomSheetDownload"
+        android:id="@+id/btnBottomSheetDeleteLibraryBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/delete" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="@string/lbl_bs_library"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btnBottomSheetDeleteShelvesBook"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btnBottomSheetDeleteLibraryBook"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/delete" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="Delete from your shelves"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/btnBottomSheetDeleteShelvesBook"
+        android:id="@+id/btnBottomSheetAddToShelve"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/baseline_add_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="@string/lbl_bs_add_shelves"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/btnBottomSheetAddToShelve"
+        android:id="@+id/btnBottomSheetAddToLibrary"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/baseline_add_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="@string/lbl_bs_add_library"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/btnBottomSheetAddToLibrary"
+        android:id="@+id/btnBottomSheetRead"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/baseline_done_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="@string/lbl_bs_read"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/btnBottomSheetRead"
+        android:id="@+id/btnBottomSheetAbout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_xlarge"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:layout_gravity="center_vertical"
+            app:srcCompat="@drawable/book" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:text="@string/lbl_bs_about_book"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_regular_2x"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>

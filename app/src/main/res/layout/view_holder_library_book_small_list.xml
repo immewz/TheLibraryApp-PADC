@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:paddingVertical="@dimen/margin_card_medium_2">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cvBook"
+        android:layout_width="60dp"
+        android:layout_height="90dp"
+        app:cardCornerRadius="@dimen/margin_small"
+        android:layout_marginStart="@dimen/margin_medium_3">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBookImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/empty_image"
+            android:scaleType="centerCrop"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/cvBook"
+        android:id="@+id/tvBookTitle"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_bold"
+        android:text="@string/lbl_book_detail_example"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_large"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/cvBook"
+        android:layout_below="@id/tvBookTitle"
+        android:id="@+id/tvAuthor"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_medium"
+        android:text="@string/lbl_book_detail_author_example"
+        android:textSize="@dimen/text_small"
+        android:layout_marginTop="@dimen/margin_card_medium"
+        android:layout_marginStart="@dimen/margin_medium_2"
+        android:layout_marginEnd="@dimen/margin_large" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/cvBook"
+        android:layout_below="@id/tvAuthor"
+        android:id="@+id/tvBook"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_medium"
+        android:text="@string/lbl_book_detail_book"
+        android:textSize="@dimen/text_small"
+        android:layout_marginStart="@dimen/margin_medium_2"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_toEndOf="@id/tvBook"
+        android:layout_below="@id/tvAuthor"
+        android:id="@+id/ivDot"
+        android:layout_width="@dimen/margin_small"
+        android:layout_height="@dimen/margin_small"
+        android:src="@drawable/elipse"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="@dimen/margin_card_medium"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/ivDot"
+        android:layout_below="@id/tvAuthor"
+        android:id="@+id/tvPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_medium"
+        android:text="@string/lbl_book_detail_pages_exampe"
+        android:textSize="@dimen/text_small"
+        android:layout_marginEnd="@dimen/margin_large"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_toStartOf="@id/btnOption"
+        android:id="@+id/btnDownloadDone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_download_done_black_24dp"
+        android:layout_marginEnd="@dimen/margin_medium_3"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/btnOption"
+        android:layout_width="@dimen/margin_large"
+        android:layout_height="@dimen/margin_large"
+        android:src="@drawable/menu"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_medium_3"/>
+
+</RelativeLayout>

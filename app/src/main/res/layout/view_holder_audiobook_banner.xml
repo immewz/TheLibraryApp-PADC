@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/margin_medium_2">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivBannerImage"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/empty_image"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/menu"
+                android:tint="@color/white"
+                android:layout_gravity="end"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <FrameLayout
+                android:id="@+id/flHeadphone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_carousel_icon"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_large"
+                android:visibility="gone">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/headphone"
+                    android:tint="@color/white"/>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/flSelected"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/background_carousel_icon"
+                android:padding="@dimen/margin_small"
+                android:layout_gravity="bottom|end"
+                android:layout_marginRight="@dimen/margin_medium"
+                android:layout_marginBottom="@dimen/margin_large">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/check"
+                    android:tint="@color/white"/>
+
+            </FrameLayout>
+
+        </FrameLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.mewz.thelibrary.views.components.BannerCustomStraightProgressBar
+        android:layout_width="match_parent"
+        android:layout_height="5dp"
+        app:customProgress="100"
+        app:customProgressMax="500"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:elevation="@dimen/margin_medium"/>
+
+</RelativeLayout>

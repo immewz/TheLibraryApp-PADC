@@ -1,0 +1,128 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-android'
+    id 'com.google.devtools.ksp'
+    id 'kotlin-kapt'
+}
+
+android {
+    namespace 'com.mewz.thelibrary'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.mewz.thelibrary"
+        minSdk 22
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+}
+
+dependencies {
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.core:core-ktx:1.10.0'
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.fragment:fragment-ktx:1.5.7'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+
+    //GSON
+    implementation 'com.google.code.gson:gson:2.10.1'
+
+    //logging interceptor
+    implementation "com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.1"
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.7.2'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.6.1'
+
+    //OKHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.10.0'
+
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.15.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.15.0'
+
+    //Room
+    def room_version = "2.6.0-alpha01"
+    implementation "androidx.room:room-common:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+
+    //RxKotlin
+    implementation "com.github.akarnokd:rxjava3-retrofit-adapter:3.0.0"
+    implementation 'io.reactivex.rxjava3:rxkotlin:3.0.0'
+    implementation 'io.reactivex.rxjava3:rxandroid:3.0.2'
+
+    //RxBinding
+    implementation 'com.jakewharton.rxbinding4:rxbinding-core:4.0.0'
+    implementation 'com.jakewharton.rxbinding4:rxbinding-appcompat:4.0.0'
+
+    //LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:2.6.1"
+
+    //ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1"
+
+    //Swipe Refresh Layout
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
+
+
+    def lifecycle_version = "1.1.1"
+
+    // lifecycle components
+    implementation "android.arch.lifecycle:extensions:$lifecycle_version"
+    kapt "android.arch.lifecycle:compiler:$lifecycle_version"
+
+    // Annotation processor
+    kapt "androidx.lifecycle:lifecycle-compiler:2.6.1"
+
+    // Work Manager
+    implementation "androidx.work:work-runtime-ktx:2.8.1"
+
+    //Local Unit Test
+    testImplementation 'junit:junit:4.12'
+    testImplementation 'androidx.test.ext:junit-ktx:1.1.5'
+    testImplementation 'androidx.test:core-ktx:1.2.0'
+    testImplementation 'io.mockk:mockk:1.10.0'
+    testImplementation 'org.mockito:mockito-core:3.1.0'
+    testImplementation 'org.robolectric:robolectric:4.3.1'
+
+    //Text the requires Android Device
+    androidTestImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    androidTestImplementation 'androidx.test:rules:1.2.0'
+    androidTestImplementation 'androidx.test:runner:1.2.0'
+    androidTestImplementation 'androidx.test:core-ktx:1.5.0'
+    androidTestImplementation 'androidx.test.ext:junit-ktx:1.1.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-contrib:3.0.2'
+    androidTestImplementation 'org.mockito:mockito-android:3.1.0'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.1'
+}

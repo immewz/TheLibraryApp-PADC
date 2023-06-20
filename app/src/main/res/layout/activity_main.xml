@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:cardCornerRadius="@dimen/margin_card_medium"
+                android:layout_marginVertical="@dimen/margin_card_medium"
+                android:layout_marginHorizontal="@dimen/margin_medium_2">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivSearch"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:src="@drawable/baseline_search_grey_24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="@dimen/margin_medium"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_toEndOf="@id/ivSearch"
+                        android:id="@+id/etSearch"
+                        android:layout_width="@dimen/width_edittext_search"
+                        android:layout_height="@dimen/margin_xlarge"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:gravity="center_vertical"
+                        android:layout_marginTop="@dimen/margin_card_medium"
+                        android:layout_marginLeft="@dimen/margin_medium_2"
+                        android:hint="@string/lbl_home_hint_search"/>
+
+                    <com.mewz.thelibrary.views.components.RoundedCornerImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:srcCompat="@drawable/mew"
+                        android:scaleType="center"
+                        app:cornerRadius="20dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/margin_medium"/>
+
+                </RelativeLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:id="@+id/fragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bottomNavigation"
+            android:layout_below="@+id/appBar" />
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            app:menu="@menu/bottom_nav_menu"
+            app:itemTextColor="@drawable/bottom_nav_tab_selector"
+            app:itemIconTint="@drawable/bottom_nav_tab_selector"
+            app:labelVisibilityMode="labeled"/>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

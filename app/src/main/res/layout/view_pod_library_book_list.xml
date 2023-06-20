@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mewz.thelibrary.views.viewpods.LibraryBookListViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/llChipButtons"
+            android:layout_width="match_parent"
+            android:layout_marginStart="@dimen/margin_medium_3"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_2">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnClearChip"
+                android:layout_width="25dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="@dimen/margin_card_medium_2"
+                app:srcCompat="@drawable/close" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvChipList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                tools:itemCount="1"
+                tools:listitem="@layout/view_holder_library_chip" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/btnSortByLibrary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/llChipButtons"
+            android:layout_alignParentStart="true"
+            android:layout_marginHorizontal="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/baseline_sort_black_24dp" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_card_medium_2"
+                android:fontFamily="@font/dms_regular"
+                android:text="@string/lbl_library_sort"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular_2x" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvSortingMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_medium"
+                android:fontFamily="@font/dms_bold"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular_2x"
+                android:text="@string/lbl_library_recent" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnViewBooks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llChipButtons"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_medium_3"
+            android:layout_marginEnd="@dimen/margin_large"
+            app:srcCompat="@drawable/baseline_grid_view_black_24dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/btnViewBooks"
+            android:id="@+id/rvLibraryBookListView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            tools:listitem="@layout/view_holder_book" />
+
+
+    </RelativeLayout>
+
+</com.mewz.thelibrary.views.viewpods.LibraryBookListViewPod>

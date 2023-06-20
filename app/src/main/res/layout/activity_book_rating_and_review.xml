@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.BookRatingAndReviewActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBackRatingAndReview"
+                    android:layout_width="@dimen/margin_xxlarge"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_chevron_left_black_24dp"
+                    android:layout_marginRight="@dimen/margin_card_medium_2"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dms_bold"
+                    android:text="@string/lbl_rating_and_review"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_18sp"
+                    android:layout_gravity="center"
+                    android:elevation="@dimen/margin_medium_2"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:id="@+id/vpRatingAndReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/view_pod_rating_and_review"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"/>
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_below="@id/vpRatingAndReview"
+                    android:id="@+id/chipGroupRatingAndReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:layout_marginTop="@dimen/margin_medium_3">
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_card_medium_2"
+                        android:text="1"
+                        android:textSize="@dimen/text_regular"
+                        app:chipEndPadding="@dimen/margin_card_medium_2"
+                        app:chipIcon="@drawable/baseline_star_black_24dp"
+                        app:chipIconSize="@dimen/margin_medium_2"
+                        app:chipStartPadding="@dimen/margin_card_medium_2"
+                        app:chipStrokeColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_card_medium_2"
+                        android:text="2"
+                        android:textSize="@dimen/text_regular"
+                        app:chipEndPadding="@dimen/margin_card_medium_2"
+                        app:chipIcon="@drawable/baseline_star_black_24dp"
+                        app:chipIconSize="@dimen/margin_medium_2"
+                        app:chipStartPadding="@dimen/margin_card_medium_2"
+                        app:chipStrokeColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_card_medium_2"
+                        android:text="3"
+                        android:textSize="@dimen/text_regular"
+                        app:chipEndPadding="@dimen/margin_card_medium_2"
+                        app:chipIcon="@drawable/baseline_star_black_24dp"
+                        app:chipIconSize="@dimen/margin_medium_2"
+                        app:chipStartPadding="@dimen/margin_card_medium_2"
+                        app:chipStrokeColor="@color/colorAccent" />
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_card_medium_2"
+                        android:text="4"
+                        android:textSize="@dimen/text_regular"
+                        app:chipEndPadding="@dimen/margin_card_medium_2"
+                        app:chipIcon="@drawable/baseline_star_black_24dp"
+                        app:chipIconSize="@dimen/margin_medium_2"
+                        app:chipStartPadding="@dimen/margin_card_medium_2"
+                        app:chipStrokeColor="@color/colorAccent" />
+
+
+                    <com.google.android.material.chip.Chip
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/margin_card_medium_2"
+                        android:text="5"
+                        android:textSize="@dimen/text_regular"
+                        app:chipEndPadding="@dimen/margin_card_medium_2"
+                        app:chipIcon="@drawable/baseline_star_black_24dp"
+                        app:chipIconSize="@dimen/margin_medium_2"
+                        app:chipStartPadding="@dimen/margin_card_medium_2"
+                        app:chipStrokeColor="@color/colorAccent" />
+
+
+                </com.google.android.material.chip.ChipGroup>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@id/chipGroupRatingAndReview"
+                    android:id="@+id/rvReview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:paddingVertical="@dimen/margin_medium"
+    android:layout_marginEnd="@dimen/margin_card_medium">
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/cgFilters"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/cbListName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/Widget.MaterialComponents.Chip.Entry"
+            tools:text="Science" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</RelativeLayout>

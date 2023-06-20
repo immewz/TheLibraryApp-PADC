@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.mewz.thelibrary.views.viewpods.RatingAndReviewViewPod xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/llRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingBookDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="3.9"
+            android:textColor="@color/black"
+            android:textSize="@dimen/text_big_3x"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatRatingBar
+            android:id="@+id/rbBookDetail"
+            style="?attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize="0.5"
+            android:progressTint="@color/colorPrimaryDark"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRatingsMarkBookDetail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="85 ratings"
+            android:textColor="@color/colorPrimaryLight"
+            android:textSize="@dimen/text_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_toEndOf="@id/llRating"
+        android:id="@+id/llRatingBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginStart="@dimen/margin_medium_3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRating5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="5"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18sp"
+                android:textStyle="bold" />
+
+            <com.mewz.thelibrary.views.components.RatingCustomStraightProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                app:customProgress="250"
+                app:customProgressMax="500"
+                app:customCornerRadius="@dimen/margin_medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRating4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="4"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18sp"
+                android:textStyle="bold" />
+
+            <com.mewz.thelibrary.views.components.RatingCustomStraightProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                app:customProgress="200"
+                app:customProgressMax="500"
+                app:customCornerRadius="@dimen/margin_medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRating3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="3"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18sp"
+                android:textStyle="bold" />
+
+            <com.mewz.thelibrary.views.components.RatingCustomStraightProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                app:customProgress="250"
+                app:customProgressMax="500"
+                app:customCornerRadius="@dimen/margin_medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRating2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="2"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18sp"
+                android:textStyle="bold" />
+
+            <com.mewz.thelibrary.views.components.RatingCustomStraightProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                app:customProgress="200"
+                app:customProgressMax="500"
+                app:customCornerRadius="@dimen/margin_medium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRating1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="1"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_18sp"
+                android:textStyle="bold" />
+
+            <com.mewz.thelibrary.views.components.RatingCustomStraightProgressBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginStart="@dimen/margin_medium_2"
+                app:customProgress="100"
+                app:customProgressMax="500"
+                app:customCornerRadius="@dimen/margin_medium"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</com.mewz.thelibrary.views.viewpods.RatingAndReviewViewPod>

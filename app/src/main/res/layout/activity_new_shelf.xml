@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NewShelfActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBackCreateShelf"
+                    android:layout_width="@dimen/margin_xxlarge"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/baseline_chevron_left_black_24dp"
+                    android:layout_marginRight="@dimen/margin_card_medium_2"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvShelfTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:fontFamily="@font/dms_bold"
+                    android:text="@string/lbl_create_shelf"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_18sp"
+                    android:layout_gravity="center_horizontal"
+                    android:elevation="@dimen/margin_medium_2"/>
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_below="@id/appBar"
+            android:id="@+id/etCreateShelf"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="@dimen/margin_medium_3"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:hint="@string/lbl_new_shelf_edit"
+            android:includeFontPadding="true"
+            android:paddingTop="@dimen/margin_medium_2"
+            android:paddingBottom="@dimen/margin_medium_2"
+            android:textSize="@dimen/text_heading_1x"
+            android:maxLength="50"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:maxEms="10"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/etCreateShelf"
+            android:id="@+id/tvCountNewShelf"
+            android:layout_width="wrap_content"
+            android:layout_marginEnd="@dimen/margin_large"
+            android:layout_alignParentEnd="true"
+            android:text="@string/lbl_edit_text_limit"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/colorPrimaryLight"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

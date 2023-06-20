@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/margin_medium_2">
+
+    <com.mewz.thelibrary.views.components.RoundedCornerImageView
+        android:id="@+id/ivProfile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mew"
+        app:cornerRadius="20dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/ivProfile"
+        android:id="@+id/tvReviewerName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/dms_bold"
+        android:text="Mewz"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_regular_2x"
+        android:layout_marginStart="@dimen/margin_large"/>
+
+    <androidx.appcompat.widget.AppCompatRatingBar
+        android:layout_toEndOf="@id/ivProfile"
+        android:id="@+id/rbReviewer"
+        style="?attr/ratingBarStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvReviewerName"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_small"
+        android:numStars="5"
+        android:rating="3.5"
+        android:stepSize="0.5"
+        android:progressTint="@color/colorPrimaryDark"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tvReviewDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvReviewerName"
+        android:layout_alignTop="@+id/rbReviewer"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:layout_toEndOf="@+id/rbReviewer"
+        android:gravity="top"
+        android:text="9/3/2023"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="@dimen/text_small" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_toEndOf="@id/ivProfile"
+        android:id="@+id/tvReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rbReviewer"
+        android:layout_marginStart="@dimen/margin_large"
+        android:layout_marginTop="@dimen/margin_card_medium_2"
+        android:gravity="top"
+        android:maxLines="5"
+        android:text="Excellent Book. Everybody should read this book. I recommended it. "
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="@dimen/text_regular_2x" />
+
+</RelativeLayout>

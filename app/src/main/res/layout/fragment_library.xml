@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.LibraryFragment">
+
+    <androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tlBookLibrary"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:backgroundTint="@color/colorPrimary"
+            app:tabBackground="@color/colorPrimary"
+            app:tabGravity="center"
+            app:tabIndicatorAnimationMode="linear"
+            app:tabIndicatorColor="@color/colorAccent"
+            app:tabIndicatorGravity="bottom"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="fixed"
+            app:tabRippleColor="@color/colorAccent"
+            app:tabSelectedTextColor="@color/colorAccent"
+            app:tabPaddingStart="40dp"
+            app:tabPaddingEnd="40dp"
+            app:tabTextAppearance="@style/TabLayoutBookStyle"/>
+
+        <View
+            android:layout_below="@id/tlBookLibrary"
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@android:color/darker_gray"/>
+
+<!--        <androidx.viewpager2.widget.ViewPager2-->
+<!--            android:layout_below="@id/divider"-->
+<!--            android:id="@+id/viewPagerLibrary"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"/>-->
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_below="@id/divider"
+            android:id="@+id/fragmentOne"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <androidx.fragment.app.FragmentContainerView
+            android:layout_below="@id/divider"
+            android:id="@+id/fragmentTwo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </RelativeLayout>
+
+</androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCreateShelf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:backgroundTint="@color/colorAccent"
+        android:gravity="center"
+        android:fontFamily="@font/dms_medium"
+        android:text="@string/btn_library_create"
+        android:textAllCaps="false"
+        android:paddingVertical="@dimen/margin_card_medium_2"
+        android:paddingHorizontal="@dimen/margin_medium_3"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_regular_2x"
+        android:textStyle="bold"
+        app:cornerRadius="25dp"
+        app:icon="@drawable/baseline_edit_white_24dp"
+        android:visibility="gone"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
